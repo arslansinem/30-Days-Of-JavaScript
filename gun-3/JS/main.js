@@ -187,3 +187,71 @@ const minutes = now.getMinutes()
 console.log(minutes)
 
 console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
+
+//EXERCISES
+let firstName = 'Sinem'
+let lastName = 'Arslan'
+let country = 'Turkey'
+let city = 'Ankara'
+let age = 25
+let isSheMarried = false
+let yearIs = 2023
+
+console.log(typeof(firstName), typeof(country), typeof(age), typeof(isSheMarried))
+
+let numberOne = '10'
+let numberTwo = 10
+
+console.log(numberOne === numberTwo)
+
+let numberThree = parseInt('9.8')
+
+console.log(numTwo === numberThree)
+
+//Find the length of python and jargon and make a falsy comparison statement.
+let python = 'python'
+let jargon = 'jargon'
+
+console.log(length.python === length.jargon)
+
+console.log(!(4<3))   //true
+console.log(!(4>3))   //false
+console.log(!(false)) //true
+
+console.log(python.includes('on'), jargon.includes('on'))
+
+//EXERCISES LEVEL 2
+/*
+let baseOfTriangle = prompt('Enter Base')
+let heightOfTriangle = prompt('Enter Height')
+console.log(`The area of triangle is ${0.5*baseOfTriangle*heightOfTriangle}`)*/
+
+//Compare your first name length and your family name length and you should get this output.
+let a = length.firstName
+let b = length.lastName
+
+a > b 
+? console.log(`Your first name, ${firstName} is longer than your family name, ${lastName}`)
+: console.log(`Your first name, ${firstName} is shorter than your family name, ${lastName}`)
+
+
+//Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
+let myAge = 25
+let yourAge = 29
+
+myAge < yourAge
+? console.log(`I'm ${yourAge-myAge} years younger than you.`)
+: console.log(`I'm ${myAge-yourAge} years older than you.`)
+
+//Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+let birthYear = prompt('Enter your birth year:')
+let driverAge = year-birthYear
+
+driverAge > 18
+? console.log('You are old enough to drive.')
+: console.log(`You are ${driverAge}. You will be allowed to drive after ${18-driverAge} years.`)
+
+//Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+let userAge = prompt('Enter your age:')
+
+console.log(`You lived ${userAge*365*24*60*60} seconds.`)
