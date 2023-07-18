@@ -329,10 +329,241 @@ string.repeat(n)*/
 console.log(jsString.repeat(3))
 
 //String to Int
+/*`parseInt()` is a function used in the JavaScript programming language to convert a string into an integer.
+The function takes a string as a parameter and tries to find the valid numeric value starting from the beginning.
+It then returns this value as an integer.
+
+When evaluating the string, the function applies the following rules:
+
+Spaces: The function ignores any leading and trailing spaces in the string.
+Sign: If the string starts with "+" or "-", the function recognizes the sign to indicate a positive or negative
+number.
+Digits: The function recognizes consecutive digits found in the string and converts them into an integer.
+It stops the conversion process after encountering non-digit characters following the initial digit.
+Non-numeric Characters: The function stops the conversion when it encounters the first non-numeric character
+following the digits and returns the found number. Therefore, if there are non-numeric characters at the
+end of the string, the function ignores any digits that come after those characters.
+
+Here's an example JavaScript code snippet demonstrating some use cases of the `parseInt()` function:
+
+```javascript
+let num1 = parseInt("123");    // 123
+let num2 = parseInt("456px");  // 456
+let num3 = parseInt("abc123"); // NaN
+let num4 = parseInt("7.89");   // 7
+```
+
+In the above example, the `parseInt()` function converts different string values into integers.
+In the first example, the string "123" is a complete number from the beginning, so it is converted to 123.
+In the second example, the string "456px" contains a numeric value from the start, so it is converted to 456.
+In the third example, the string "abc123" does not contain a numeric value, resulting in the conversion result
+of NaN (Not-a-Number). Finally, in the fourth example, the string "7.89" contains a non-numeric character (dot),
+so the function ignores the digits after the dot and converts it to 7.
+
+The `parseInt()` function converts the string to an integer in the decimal base. 
+However, it is also possible to perform conversions using different number bases by using the radix parameter,
+which is the second parameter of the function. For example, by setting the radix parameter to 16,
+you can convert a hexadecimal string to an integer in the decimal base. */
+
+let num1 = parseInt("123");    // 123
+let num2 = parseInt("456px");  // 456
+let num3 = parseInt("abc123"); // NaN
+let num4 = parseInt("7.89");   // 7
+
+console.log(num1, num2, num3, num4)
 
 let numbr = '10'
 let numInt = parseInt(numbr)
 
-console.log(numInt)
+console.log(numInt) //10
 
 // let numInt = Number(numbr)
+let numIntgr = Number(num)
+
+console.log(numInt) //10
+
+let numIntg = +num
+
+console.log(numInt) //10
+
+//String to float
+let numFl = '9.81'
+let numFloat = parseFloat(numFl)
+
+console.log(numFloat) //9.81
+
+let numFlo = Number(numFl)
+
+console.log(numFlo) //9.81
+
+let numFlNm = +numFl
+
+console.log(numFlNm) //9.81
+
+//Float to Int
+let flInt = '7.21'
+let flToInt = parseInt(flInt)
+
+console.log(flToInt)
+
+//DAY 2 EXERCISES
+
+//1.Declare a variable named challenge and assign it to an initial value '30 Days Of JavaScript'.
+let challenge = '30 Days Of JavaScript'
+
+//Print the string on the browser console using console.log()
+//Print the length of the string on the browser console using console.log() [21]
+
+//Change all the string characters to capital letters using toUpperCase() method
+console.log(challenge.toUpperCase())
+
+//Change all the string characters to lowercase letters using toLowerCase() method
+console.log(challenge.toLowerCase())
+
+//Cut (slice) out the first word of the string using substr() or substring() method
+console.log(challenge.substr(3))
+
+//Slice out the phrase Days Of JavaScript from 30 Days Of JavaScript.
+console.log(challenge.substring(0,2))
+
+//Check if the string contains a word Script using includes() method
+console.log(challenge.includes('Script'))
+
+//Split the string into an array using split() method
+console.log(challenge.split())
+
+//Split the string 30 Days Of JavaScript at the space using split() method
+console.log(challenge.split(''))
+
+//'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' split the string at the comma and change it to an array.
+let socialNetwork = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+
+console.log(socialNetwork.split(','))
+
+//Change 30 Days Of JavaScript to 30 Days Of Python using replace() method.
+let pythonChallenge = challenge.replace('JavaScript','Python')
+
+console.log(pythonChallenge)
+
+//What is character at index 15 in '30 Days Of JavaScript' string? Use charAt() method.
+console.log(challenge.charAt(15))
+
+//What is the character code of J in '30 Days Of JavaScript' string using charCodeAt()
+console.log(challenge.charCodeAt('J'))
+
+//Use indexOf to determine the position of the first occurrence of a in 30 Days Of JavaScript
+console.log(challenge.indexOf('a'))
+
+//Use lastIndexOf to determine the position of the last occurrence of a in 30 Days Of JavaScript.
+console.log(challenge.lastIndexOf('a'))
+
+/* Use indexOf to find the position of the first occurrence of the word because in the following sentence:
+'You cannot end a sentence with because because because is a conjunction' */
+let because = 'You cannot end a sentence with because because because is a conjunction'
+
+console.log(because.indexOf('because'))
+
+/* Use lastIndexOf to find the position of the last occurrence of the word because in the following sentence:
+'You cannot end a sentence with because because because is a conjunction' */
+console.log(because.lastIndexOf('because'))
+
+/* Use search to find the position of the first occurrence of the word because in the following sentence:
+'You cannot end a sentence with because because because is a conjunction' */
+console.log(because.search('because'))
+
+//Use trim() to remove any trailing whitespace at the beginning and the end of a string.E.g ' 30 Days Of JavaScript '.
+let thirtyDays = ' 30 Days Of JavaScript '
+console.log(thirtyDays.trim(' '))
+console.log(thirtyDays)
+
+//Use startsWith() method with the string 30 Days Of JavaScript and make the result true
+console.log(newString.startsWith('30'))
+
+//Use endsWith() method with the string 30 Days Of JavaScript and make the result true
+console.log(newString.endsWith('JavaScript'))
+
+//Use match() method to find all the a’s in 30 Days Of JavaScript
+console.log(newString.match(/a/g))
+
+//Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
+let days = '30 Days of'
+
+console.log(days.concat(' JavaScript'))
+
+//Use repeat() method to print 30 Days Of JavaScript 2 times
+console.log(newString.repeat(2))
+
+//Using console.log() print out the following statement: 
+//The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.
+let newQuote = 'The quote "There is no exercise better for the heart than reaching down and lifting people up." by John Holmes teaches us to help one another.'
+
+console.log(newQuote);
+
+//Using console.log() print out the following quote by Mother Teresa:
+let qouteTer = "\"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.\""
+console.log(qouteTer)
+
+//Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+let checking = '10'
+
+console.log(typeof checking)
+
+let checkingType = parseInt(checking)
+
+console.log(typeof checkingType)
+
+//Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+let floatNum = '9.8'
+console.log(typeof floatNum)
+
+let floatNumb = Math.ceil(floatNum)
+console.log(floatNumb)
+
+//Check if 'on' is found in both python and jargon
+let python = 'python'
+let jargon = 'jargon'
+
+console.log(jargon.includes('on'),python.includes('on'))
+
+//I hope this course is not full of jargon. Check if jargon is in the sentence.
+let sentence = 'I hope this course is not full of jargon.'
+
+console.log(sentence.includes('jargon'))
+
+//Generate a random number between 0 and 100 inclusively.
+let randomNumber = Math.floor(Math.random() * 101)
+
+console.log(randomNumber)
+
+//Generate a random number between 50 and 100 inclusively.
+/*const num = Math.floor(Math.random() * 51) + 50;
+console.log(num); */
+
+//Access the 'JavaScript' string characters using a random number.
+console.log(firstLetter) //its defined above
+
+//Use substr to slice out the phrase because because because from the following sentence:
+//'You cannot end a sentence with because because because is a conjunction'
+console.log(because.substr(31,23))
+
+//'Love is the best thing in this world. Some found their love and some are still looking for their love.' 
+//Count the number of word love in this sentence.
+let loveCount = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+
+console.log(loveCount.match(/love/gi))
+
+//Clean the following text.
+/* const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. 
+The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple.;
+I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? 
+%Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching' */
+
+const fSentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple.;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+
+const cleanedText = fSentence.replace(/[^\w\s]/g, '')
+
+console.log(cleanedText)
+
+//Calculate the total annual income of the person by extracting the numbers from the following text. 
+//'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+console.log(12*(5000+15000)+10000)
