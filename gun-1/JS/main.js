@@ -1,3 +1,11 @@
+//Comments can make code readable
+//Welcome to 30DaysOfJavaScript
+/*comments can make code readable, 
+easy to reuse and informative */
+console.log('Welcome to 30DaysOfJavaScript')
+
+console.log('Hello, World!')
+
 let firstName = 'Sinem'
 let lastName = 'Arslan'
 let country = 'Turkey'
@@ -30,3 +38,16 @@ let yourAge = '26'
 
 console.log('I am', myAge, 'years old.')
 console.log('I am', yourAge, 'years old.')
+
+console.log(typeof 'Asabeneh') // string
+console.log(typeof 5) // number
+console.log(typeof true) // boolean
+console.log(typeof null) // object type
+console.log(typeof undefined) // undefined
+
+let birthYear = 1997
+let hasCat = false
+let catName
+console.log(catName) //Undefined
+let emptyValue = null
+console.log(emptyValue)
