@@ -257,3 +257,58 @@ const secondNums = [1, 4, 9]
 
 const arrayOfArray = [[1,2,3],[1,4,8]] 
 console.log(arrayOfArray[1]) //0 olursa ilk index ([1,2,3]), 1 olursa ikinci indexi ([1,4,8]) verir.
+
+//EXERCISES
+
+//Find the length of your array
+const myArr = [1,2,3,4,5,6]
+console.log(myArr.length) //6
+
+//Get the first item, the middle item and the last item of the array
+console.log(myArr[0],myArr[3],myArr[5]) //1 4 6
+
+//Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
+const mixedDataTypes = ['Sinem', 25, false, 'Engineer', 'Turkey', 'Female']
+console.log(mixedDataTypes.length)
+
+//Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
+const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+
+//Print the array using console.log()
+console.log(itCompanies)
+
+//Print the number of companies in the array
+console.log(itCompanies.length)
+
+//Change each company name to uppercase and print them out
+let upperCaseCompanies = []
+
+for(let i = 0; i < itCompanies.length; i++){
+
+    upperCaseCompanies.push(itCompanies[i].toUpperCase());
+}
+console.log(upperCaseCompanies)
+
+//Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+console.log(`${itCompanies[0]}, ${itCompanies[1]}, ${itCompanies[2]}, ${itCompanies[3]}, ${itCompanies[4]}, ${itCompanies[5]} and ${itCompanies[6]} are big IT companies.`)
+
+//Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
+let checkingCompanies = itCompanies.includes('Amazon')
+? console.log('Amazon')
+: console.log('Company is not found.')
+
+//Sort the array using sort() method
+let sortCompanies = itCompanies.sort()
+console.log(sortCompanies)
+
+//Reverse the array using reverse() method
+let reversedCompanies = itCompanies.reverse()
+console.log(reversedCompanies)
+
+//Slice out the first 3 companies from the array
+let slicedCompanies = itCompanies.slice(2,4)
+console.log(slicedCompanies)
+
+//Remove all IT companies
+let removedCompanies = itCompanies.splice()
+console.log(removedCompanies)
