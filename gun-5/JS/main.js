@@ -312,3 +312,89 @@ console.log(slicedCompanies)
 //Remove all IT companies
 let removedCompanies = itCompanies.splice()
 console.log(removedCompanies)
+
+//First remove all the punctuations and change the string to array and count the number of words in the array
+let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+const words = text.split(' ')
+
+console.log(words)
+console.log(words.length)
+
+//In the following shopping cart add, remove, edit items
+const shoppingList = ['Milk','Coffee','Tea','Honey']
+
+console.log(shoppingList)
+
+shoppingList.push('Lemon')
+
+console.log(shoppingList) //['Milk', 'Coffee', 'Tea', 'Honey', 'Lemon']
+
+shoppingList.pop(' ')
+console.log(shoppingList) //['Milk','Coffee','Tea','Honey']
+
+console.log(shoppingList.splice(1,1)) //['Coffee']
+
+console.log(shoppingList.join('-')) //Milk-Tea-Honey (Because we splice the Coffee)
+
+console.log(shoppingList) // ['Milk', 'Tea', 'Honey']
+
+//add 'Meat' in the beginning of your shopping cart if it has not been already added
+shoppingList.unshift('Meat')
+console.log(shoppingList) //['Meat', 'Milk', 'Tea', 'Honey']
+
+//add Sugar at the end of you shopping cart if it has not been already added
+shoppingList.push('Sugar')
+console.log(shoppingList)
+
+//modify Tea to 'Green Tea'
+shoppingList[2] = 'Green Tea'
+console.log(shoppingList)
+
+/* const countries = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya'
+] 
+In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list. */
+
+let checkingEthiopia = countries.includes('Ethiopia')
+
+? console.log('Ethiopia')
+: countries.push('Ethiopia') //Ethiopia
+
+
+//In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+let checkWebTechs = webTechs.includes('Sass')
+
+? console.log('Sass is a CSS preprocess.')
+: webTechs.push('Sass')
+
+console.log(webTechs)
+
+//Concatenate the following two variables and store it in a fullStack variable.
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node','Express', 'MongoDB']
+const fullStack = frontEnd.concat(backEnd)
+
+console.log(fullStack) //["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+
+//The following is an array of 10 students ages:
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+//Sort the array and find the min and max age
+ages.sort()
+
+console.log(ages) //[19, 19, 20, 22, 24, 24, 24, 25, 25, 26]
+console.log(ages.length) //10
+console.log(ages[0],ages[9]) //19 26
+
+//Find the range of the ages(max minus min)
+console.log(ages[9]-ages[0])
