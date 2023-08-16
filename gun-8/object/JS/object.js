@@ -181,3 +181,97 @@ console.log(person['phone number'])
   
   const entries = Object.entries(copyPerson)
   console.log(entries)
+
+  //Checking properties using hasOwnProperty()
+  //hasOwnProperty: To check if a specific key or property exist in an object
+  console.log(copyPerson.hasOwnProperty('name'))
+  console.log(copyPerson.hasOwnProperty('score'))
+
+
+  //EXERCISES
+  //Create an empty object called dog
+  const dog = {};
+
+  //Print the the dog object on the console
+  console.log(dog)
+
+  //Add name, color, age and bark properties for the dog object. The bark property is a method which return woof woof
+  dog.name = 'Jessy'
+  dog.color = 'white'
+  dog.bark = 'woof woof'
+
+  //Get name, legs, color, age and bark value from the dog object
+  console.log(dog)
+
+  //Set new properties the dog object: breed, getDogInfo
+
+  dog.getDogInfo = function(){
+    let statement = `Her name is ${this.name}. Her color is ${this.color} and when she talks she says '${this.bark}'. `
+    return statement
+  }
+  console.log(dog.getDogInfo())
+
+//QUESTION
+
+  const users = {
+    Alex: {
+      email: "alex@alex.com",
+      skills: ["HTML", "CSS", "JavaScript"],
+      age: 20,
+      isLoggedIn: false,
+      points: 30
+    },
+    Asab: {
+      email: "asab@asab.com",
+      skills: ["HTML", "CSS", "JavaScript", "Redux", "MongoDB", "Express", "React", "Node"],
+      age: 25,
+      isLoggedIn: false,
+      points: 50
+    },
+    Brook: {
+      email: "daniel@daniel.com",
+      skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+      age: 30,
+      isLoggedIn: true,
+      points: 50
+    },
+    Daniel: {
+      email: "daniel@alex.com",
+      skills: ["HTML", "CSS", "JavaScript", "Python"],
+      age: 20,
+      isLoggedIn: false,
+      points: 40
+    },
+    John: {
+      email: "john@john.com",
+      skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+      age: 20,
+      isLoggedIn: true,
+      points: 50
+    },
+    Thomas: {
+      email: "thomas@thomas.com",
+      skills: ["HTML", "CSS", "JavaScript", "React"],
+      age: 20,
+      isLoggedIn: false,
+      points: 40
+    },
+    Paul: {
+      email: "paul@paul.com",
+      skills: ["HTML", "CSS", "JavaScript", "MongoDB", "Express", "React", "Node"],
+      age: 20,
+      isLoggedIn: false,
+      points: 40
+    }
+    
+  }
+ 
+  let personWithMostSkills = Object.keys(users).reduce((personWithMostSkills, user) => {
+    if (users[user].skills.length > users[personWithMostSkills].skills.length) {
+      return user;
+    } else {
+      return personWithMostSkills;
+    }
+  });
+  
+  console.log(personWithMostSkills); 
